@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaNode IT | Managed IT Services & Cloud in the GTA</title>
+    <style>
+        /* Modern MSP Color Palette */
+        :root {
+            --bg-dark: #0f172a;      /* Deep Slate Blue */
+            --bg-light: #f8fafc;     /* Off-White */
+            --accent: #ef4444;       /* Alert Red (for high-conversion buttons) */
+            --accent-hover: #dc2626; 
+            --text-main: #334155;    
+            --text-light: #cbd5e1;
+            --white: #ffffff;
+            --card-border: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background-color: var(--bg-dark);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-cta {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-cta:hover { background-color: var(--accent-hover); }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-color: var(--bg-dark);
+            color: var(--white);
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Industries Section --- */
+        .industries {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 2rem 5%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* --- Services Section (The 3 Pillars) --- */
+        .section-container {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--bg-dark);
+            margin-bottom: 1rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card h3 {
+            color: var(--bg-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* --- The Process Section --- */
+        .process-section {
+            background-color: #e2e8f0;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 3rem auto 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .step-num {
+            background: var(--bg-dark);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem auto;
+        }
+
+        /* --- Booking Section --- */
+        .booking-container {
+            display: flex;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-text {
+            flex: 1;
+            padding: 4rem;
+            background-color: var(--bg-dark);
+            color: var(--white);
+        }
+
+        .booking-text h2 { margin-bottom: 1.5rem; font-size: 2rem;}
+        
+        .calendly-box {
+            flex: 1;
+            padding: 2rem;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            border: 2px dashed #cbd5e1;
+            margin: 2rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #020617;
+            color: var(--text-light);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .booking-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">NOVANODE IT</a>
+        <a href="#assessment" class="nav-cta">Talk to an Expert</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Proactive IT Services for the Greater Toronto Area</h1>
+        <p>From 24/7 healthcare IT support to AWS cloud migrations. We manage your technology infrastructure so you can focus on scaling your business securely.</p>
+        <a href="#assessment" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem;">Book Your Free IT Assessment</a>
+    </header>
+
+    <div class="industries">
+        <span>✓ Dental Clinics</span>
+        <span>✓ Long-Term Care Homes</span>
+        <span>✓ Private Healthcare</span>
+        <span>✓ Small Business Logistics</span>
+    </div>
+
+    <section class="section-container">
+        <div class="section-header">
+            <h2>Comprehensive IT Solutions</h2>
+            <p>Built for security, compliance, and zero downtime.</p>
+        </div>
+        
+        <div class="grid-3">
+            <div class="card">
+                <h3>Managed IT (MSP)</h3>
+                <p>Full-service monitoring, patch management, and helpdesk support. We proactively fix issues before your staff even notices them. Fully PHIPA compliant for clinical environments.</p>
+            </div>
+            <div class="card">
+                <h3>Cloud & Infrastructure</h3>
+                <p>Seamless migration to AWS. Secure remote work setups, automated disaster recovery backups, and ongoing server optimization to reduce your monthly tech overhead.</p>
+            </div>
+            <div class="card">
+                <h3>Specialized Projects</h3>
+                <p>Custom hardware deployments including Surface Hub 2S upgrades, Unity interactive kiosks, and complex network cabling for new office builds.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <h2>How to Upgrade Your IT</h2>
+        <p>Switching IT providers doesn't have to be a headache.</p>
+        
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>The Free Audit</h3>
+                <p>We review your current network, identify security risks, and assess your backup strategy.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>The Strategy</h3>
+                <p>You receive a custom IT roadmap and a flat-rate monthly proposal tailored to your operations.</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Seamless Onboarding</h3>
+                <p>We handle the entire migration and deploy our remote monitoring agents with zero downtime.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="assessment" class="section-container">
+        <div class="booking-container">
+            <div class="booking-text">
+                <h2>Stop waiting for things to break.</h2>
+                <p>Book a 15-minute introductory call today. We will discuss your current IT setup, operational bottlenecks, and see if our proactive support model is a fit for your business.</p>
+                <br>
+                <p><strong>Serving:</strong> Toronto, Mississauga, Brampton & Hamilton.</p>
+                <p><strong>Phone:</strong> (416) 555-0198</p>
+            </div>
+            
+            <div class="calendly-box">
+                <p style="text-align: center; color: #64748b;">
+                    <em>https://calendly.com/theniteshdas/30min</em><br><br>
+                    Or <a href="https://calendly.com/theniteshdas/30min" target="_blank" style="color: var(--accent);">click here to view my availability</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3 style="color: var(--white); margin-bottom: 1rem;">NOVANODE IT SOLUTIONS INC.</h3>
+        <p>Toronto, Ontario, Canada</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2026 NovaNode IT. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
