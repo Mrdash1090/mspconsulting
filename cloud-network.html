@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Services & Network Solutions | MSP Consulting</title>
+    <style>
+        /* Exact same CSS as managed-it.html */
+        :root { --bg-dark: #0f172a; --bg-light: #f8fafc; --accent: #ef4444; --accent-hover: #dc2626; --text-main: #334155; --text-light: #cbd5e1; --white: #ffffff; --card-border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { color: var(--text-main); background-color: var(--bg-light); line-height: 1.6; scroll-behavior: smooth; }
+        nav { background-color: var(--bg-dark); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--accent); }
+        .logo { color: var(--white); font-size: 1.5rem; font-weight: 800; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a.page-link { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a.page-link:hover { color: var(--accent); }
+        .nav-cta { background-color: var(--accent); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: 0.3s; margin-left: 1rem; }
+        .nav-cta:hover { background-color: var(--accent-hover); }
+        .page-hero { background-color: var(--bg-dark); color: var(--white); padding: 4rem 5%; text-align: center; }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .service-detail-section { padding: 4rem 5%; max-width: 1000px; margin: 0 auto; }
+        .service-block { background: var(--white); padding: 3rem; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 3rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .service-block h2 { color: var(--bg-dark); font-size: 2rem; margin-bottom: 1rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.5rem; display: inline-block; }
+        .service-block p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .service-block ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .service-block ul li { margin-bottom: 0.5rem; }
+        footer { background-color: #020617; color: var(--text-light); padding: 3rem 5%; text-align: center; margin-top: 4rem; }
+        @media(max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MSP Consulting</a>
+        <div class="nav-links">
+            <a href="managed-it.html" class="page-link">Managed IT</a>
+            <a href="cloud-network.html" class="page-link" style="color: var(--accent);">Cloud & Network</a>
+            <a href="consulting-projects.html" class="page-link">Consulting & Projects</a>
+            <a href="index.html#assessment" class="nav-cta">Talk to an Expert</a>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <h1>Cloud & Network Solutions</h1>
+        <p style="font-size: 1.2rem; color: var(--text-light);">Modernize your infrastructure for speed, remote accessibility, and ironclad security.</p>
+    </header>
+
+    <section class="service-detail-section">
+        
+        <div class="service-block">
+            <h2>Cloud Services</h2>
+            <p>Transitioning to the cloud drastically reduces hardware costs while increasing flexibility. We provide comprehensive Cloud Services, including seamless migrations to Amazon Web Services (AWS) and Microsoft 365, giving your team secure access to their tools from anywhere.</p>
+            <ul>
+                <li>AWS Cloud Architecture and Hosting</li>
+                <li>Microsoft 365 migrations and management</li>
+                <li>Secure file sharing and cloud collaboration setups</li>
+            </ul>
+        </div>
+
+        <div class="service-block">
+            <h2>IT Infrastructure Management</h2>
+            <p>Your hardware needs to be reliable. With our IT Infrastructure Management, we oversee the lifecycle of your servers, storage systems, and core hardware. We optimize performance to ensure your digital foundation never bottlenecks your business growth.</p>
+            <ul>
+                <li>On-premise and hybrid server management</li>
+                <li>Hardware lifecycle planning and procurement</li>
+                <li>Proactive capacity planning</li>
+            </ul>
+        </div>
+
+        <div class="service-block">
+            <h2>Network Solutions</h2>
+            <p>A fast, stable internet connection is the lifeblood of a modern office. Our Network Solutions cover everything from secure Wi-Fi deployments to advanced firewall configurations and physical cabling, ensuring maximum uptime and preventing unauthorized access.</p>
+            <ul>
+                <li>Business-grade Wi-Fi and switch deployments</li>
+                <li>Next-gen firewall setup and traffic monitoring</li>
+                <li>Secure internal routing for medical billing systems</li>
+            </ul>
+        </div>
+
+        <div class="service-block">
+            <h2>Remote Work Solutions</h2>
+            <p>Empower your staff to work from home securely. Our Remote Work Solutions ensure that off-site employees can access your internal clinic data and billing software through highly encrypted channels without risking a data breach.</p>
+            <ul>
+                <li>Secure VPN (Virtual Private Network) deployments</li>
+                <li>Multi-Factor Authentication (MFA) enforcement</li>
+                <li>Remote desktop access and mobile device management</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html#assessment" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem;">Discuss Your Cloud Strategy</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <h3 style="color: var(--white); margin-bottom: 1rem;">MSP CONSULTING INC.</h3>
+        <p>Toronto, Ontario, Canada</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2026 MSP Consulting. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

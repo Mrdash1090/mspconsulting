@@ -7,9 +7,9 @@
     <style>
         /* Modern MSP Color Palette */
         :root {
-            --bg-dark: #0f172a;      /* Deep Slate Blue */
-            --bg-light: #f8fafc;     /* Off-White */
-            --accent: #ef4444;       /* Alert Red (for high-conversion buttons) */
+            --bg-dark: #0f172a;      
+            --bg-light: #f8fafc;     
+            --accent: #ef4444;       
             --accent-hover: #dc2626; 
             --text-main: #334155;    
             --text-light: #cbd5e1;
@@ -53,6 +53,23 @@
             text-transform: uppercase;
         }
 
+        .nav-links {
+            display: flex; 
+            gap: 1.5rem; 
+            align-items: center;
+        }
+
+        .nav-links a.page-link {
+            color: var(--white); 
+            text-decoration: none; 
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a.page-link:hover {
+            color: var(--accent);
+        }
+
         .nav-cta {
             background-color: var(--accent);
             color: var(--white);
@@ -61,6 +78,7 @@
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
+            margin-left: 1rem;
         }
 
         .nav-cta:hover { background-color: var(--accent-hover); }
@@ -105,7 +123,7 @@
             font-size: 1.1rem;
         }
 
-        /* --- Services Section --- */
+        /* --- Services Section (Updated to 3 Pillars) --- */
         .section-container {
             padding: 5rem 5%;
             max-width: 1200px;
@@ -123,7 +141,7 @@
             margin-bottom: 1rem;
         }
 
-        .grid-services {
+        .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -136,6 +154,8 @@
             border: 1px solid var(--card-border);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
             text-align: center;
         }
 
@@ -143,16 +163,32 @@
 
         .card h3 {
             color: var(--bg-dark);
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             border-bottom: 2px solid var(--accent);
             padding-bottom: 0.5rem;
             display: inline-block;
         }
-
+        
         .card p {
-            font-size: 0.95rem;
-            color: var(--text-main);
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: var(--accent);
+            color: var(--white);
         }
 
         /* --- The Process Section --- */
@@ -234,20 +270,26 @@
         @media(max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .booking-container { flex-direction: column; }
+            .nav-links { display: none; /* In a real app, this would be a hamburger menu */ }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">MSP Consulting</a>
-        <a href="#assessment" class="nav-cta">Talk to an Expert</a>
+        <a href="index.html" class="logo">MSP Consulting</a>
+        <div class="nav-links">
+            <a href="managed-it.html" class="page-link">Managed IT</a>
+            <a href="cloud-network.html" class="page-link">Cloud & Network</a>
+            <a href="consulting-projects.html" class="page-link">Consulting & Projects</a>
+            <a href="#assessment" class="nav-cta">Talk to an Expert</a>
+        </div>
     </nav>
 
     <header class="hero">
         <h1>Proactive IT Services for the Greater Toronto Area</h1>
         <p>From 24/7 healthcare IT support to AWS cloud migrations. We manage your technology infrastructure so you can focus on scaling your business securely.</p>
-        <a href="#assessment" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem;">Book Your Free IT Assessment</a>
+        <a href="#assessment" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem; margin-left: 0;">Book Your Free IT Assessment</a>
     </header>
 
     <div class="industries">
@@ -263,46 +305,21 @@
             <p>Built for security, compliance, and zero downtime.</p>
         </div>
         
-        <div class="grid-services">
+        <div class="grid-3">
             <div class="card">
-                <h3>Managed IT Services</h3>
-                <p>Keep your systems running smoothly with proactive maintenance and flat-rate support.</p>
+                <h3>Managed IT</h3>
+                <p>Proactive maintenance, 24/7 cybersecurity, flat-rate support, and automated backup strategies to keep your operations running flawlessly.</p>
+                <a href="managed-it.html" class="learn-more-btn">Explore Managed IT</a>
             </div>
             <div class="card">
-                <h3>Cybersecurity Solutions</h3>
-                <p>Protect your business with multi-layered security and 24/7 threat monitoring.</p>
+                <h3>Cloud & Network</h3>
+                <p>Seamless AWS migrations, secure remote work environments, and reliable physical network setups designed for speed and security.</p>
+                <a href="cloud-network.html" class="learn-more-btn">Explore Cloud & Network</a>
             </div>
             <div class="card">
-                <h3>Backup & Disaster Recovery</h3>
-                <p>Safeguard your data and ensure business continuity during any disruption.</p>
-            </div>
-            <div class="card">
-                <h3>Cloud Services</h3>
-                <p>Flexible, secure access to your business tools from anywhere in the world.</p>
-            </div>
-            <div class="card">
-                <h3>IT Infrastructure Management</h3>
-                <p>Optimize performance and reliability across your entire IT environment.</p>
-            </div>
-            <div class="card">
-                <h3>Helpdesk & Technical Support</h3>
-                <p>Fast, friendly support whenever you need it — no more waiting on hold.</p>
-            </div>
-            <div class="card">
-                <h3>IT Consulting</h3>
-                <p>Strategic advice to align your IT with your business goals.</p>
-            </div>
-            <div class="card">
-                <h3>Network Solutions</h3>
-                <p>Reliable and secure network design, setup, and management.</p>
-            </div>
-            <div class="card">
-                <h3>Remote Work Solutions</h3>
-                <p>Empower your remote workforce with secure and efficient IT access.</p>
-            </div>
-            <div class="card">
-                <h3>Specialized IT Projects</h3>
-                <p>Custom IT solutions for upgrades, migrations, and new implementations.</p>
+                <h3>Consulting & Projects</h3>
+                <p>Strategic vCIO advice, complex hardware upgrades, and specialized technology deployments customized to your business goals.</p>
+                <a href="consulting-projects.html" class="learn-more-btn">Explore Consulting</a>
             </div>
         </div>
     </section>
@@ -337,7 +354,7 @@
                 <p>Book a 15-minute introductory call today. We will discuss your current IT setup, operational bottlenecks, and see if our proactive support model is a fit for your business.</p>
                 <br>
                 <p><strong>Serving:</strong> Toronto, Mississauga, Brampton & Hamilton.</p>
-                <p><strong>Phone:</strong> (416) 660-2390</p>
+                <p><strong>Phone:</strong> (416) 555-0198</p>
             </div>
             
             <div class="calendly-box">
