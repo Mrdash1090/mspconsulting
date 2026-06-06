@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent IT Pricing | MSP Consulting</title>
+    <style>
+        /* Exact same CSS as previous pages */
+        :root { --bg-dark: #0f172a; --bg-light: #f8fafc; --accent: #ef4444; --accent-hover: #dc2626; --text-main: #334155; --text-light: #cbd5e1; --white: #ffffff; --card-border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { color: var(--text-main); background-color: var(--bg-light); line-height: 1.6; scroll-behavior: smooth; }
+        
+        /* --- Navigation --- */
+        nav { background-color: var(--bg-dark); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--accent); }
+        .logo { color: var(--white); font-size: 1.5rem; font-weight: 800; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a.page-link { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a.page-link:hover { color: var(--accent); }
+        .nav-cta { background-color: var(--accent); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: 0.3s; margin-left: 1rem; }
+        .nav-cta:hover { background-color: var(--accent-hover); }
+        
+        /* --- Page Hero --- */
+        .page-hero { background-color: var(--bg-dark); color: var(--white); padding: 4rem 5%; text-align: center; }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        
+        /* --- Layout --- */
+        .section-container { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        
+        /* --- Cards --- */
+        .card { background: var(--white); padding: 2.5rem 2rem; border-radius: 8px; border: 1px solid var(--card-border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: transform 0.3s; display: flex; flex-direction: column; text-align: center; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--bg-dark); font-size: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; display: inline-block; }
+        .learn-more-btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; border-radius: 4px; font-weight: bold; transition: all 0.2s; margin-top: auto; }
+        .learn-more-btn:hover { background-color: var(--accent); color: var(--white); }
+        
+        /* --- Footer --- */
+        footer { background-color: #020617; color: var(--text-light); padding: 3rem 5%; text-align: center; margin-top: 2rem; }
+        @media(max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">MSP Consulting</a>
+        <div class="nav-links">
+            <a href="managed-it.html" class="page-link">Managed IT</a>
+            <a href="cloud-network.html" class="page-link">Cloud & Network</a>
+            <a href="consulting-projects.html" class="page-link">Consulting & Projects</a>
+            <a href="pricing.html" class="page-link" style="color: var(--accent);">Pricing</a>
+            <a href="index.html#assessment" class="nav-cta">Talk to an Expert</a>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <h1>Transparent Monthly Pricing</h1>
+        <p style="font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 0 auto;">Predictable IT costs with no hidden fees or surprise invoices. Choose the plan that fits your clinic's scale and compliance needs.</p>
+    </header>
+
+    <section class="section-container">
+        <div class="grid-3">
+            <div class="card">
+                <h3>Basic</h3>
+                <div style="font-size: 2.5rem; font-weight: bold; color: var(--bg-dark); margin: 1rem 0;">$50<span style="font-size: 1rem; color: var(--text-main); font-weight: normal;"> / user / mo</span></div>
+                <p style="font-weight: bold; color: var(--accent); margin-bottom: 1.5rem;">Essential Monitoring</p>
+                <ul style="list-style-type: none; padding: 0; text-align: left; margin-bottom: 2rem; flex-grow: 1;">
+                    <li style="margin-bottom: 0.8rem;">✓ Remote Helpdesk Support</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Basic Endpoint Antivirus</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Automated Patch Management</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Standard Business Hours</li>
+                </ul>
+                <a href="index.html#assessment" class="learn-more-btn">Book an Audit</a>
+            </div>
+
+            <div class="card" style="border: 2px solid var(--accent); position: relative;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--white); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">MOST POPULAR</div>
+                <h3>Essential</h3>
+                <div style="font-size: 2.5rem; font-weight: bold; color: var(--bg-dark); margin: 1rem 0;">$100<span style="font-size: 1rem; color: var(--text-main); font-weight: normal;"> / user / mo</span></div>
+                <p style="font-weight: bold; color: var(--accent); margin-bottom: 1.5rem;">Proactive Security</p>
+                <ul style="list-style-type: none; padding: 0; text-align: left; margin-bottom: 2rem; flex-grow: 1;">
+                    <li style="margin-bottom: 0.8rem;">✓ Everything in Basic</li>
+                    <li style="margin-bottom: 0.8rem;">✓ 24/7 Network Monitoring</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Next-Gen Ransomware Protection</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Daily Cloud Backups</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Microsoft 365 Management</li>
+                </ul>
+                <a href="index.html#assessment" class="nav-cta" style="margin: 0; display: inline-block;">Book an Audit</a>
+            </div>
+
+            <div class="card">
+                <h3>Advanced</h3>
+                <div style="font-size: 2.5rem; font-weight: bold; color: var(--bg-dark); margin: 1rem 0;">$150<span style="font-size: 1rem; color: var(--text-main); font-weight: normal;"> / user / mo</span></div>
+                <p style="font-weight: bold; color: var(--accent); margin-bottom: 1.5rem;">Total Compliance</p>
+                <ul style="list-style-type: none; padding: 0; text-align: left; margin-bottom: 2rem; flex-grow: 1;">
+                    <li style="margin-bottom: 0.8rem;">✓ Everything in Essential</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Full PHIPA Compliance Tools</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Advanced Disaster Recovery</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Strategic vCIO Consulting</li>
+                    <li style="margin-bottom: 0.8rem;">✓ On-Site Emergency Support</li>
+                </ul>
+                <a href="index.html#assessment" class="learn-more-btn">Book an Audit</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; background-color: #e2e8f0; padding: 3rem; border-radius: 8px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--bg-dark);">Not sure which plan is right for your clinic?</h3>
+            <p style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">We offer custom pricing models for larger medical facilities, multi-location dental offices, and specialized hardware setups.</p>
+            <a href="index.html#assessment" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem;">Schedule a Custom Discovery Call</a>
+        </div>
+    </section>
+
+    <footer>
+        <h3 style="color: var(--white); margin-bottom: 1rem;">MSP CONSULTING INC.</h3>
+        <p>Toronto, Ontario, Canada</p>
+        <p style="margin-top: 2rem; font-size: 0.9rem;">&copy; 2026 MSP Consulting. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
