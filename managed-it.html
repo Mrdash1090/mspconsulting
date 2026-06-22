@@ -1,153 +1,33 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Managed IT Services & Cybersecurity | MSP Consulting</title>
     <style>
-        /* Modern MSP Color Palette */
-        :root {
-            --bg-dark: #0f172a;      
-            --bg-light: #f8fafc;     
-            --accent: #ef4444;       
-            --accent-hover: #dc2626; 
-            --text-main: #334155;    
-            --text-light: #cbd5e1;
-            --white: #ffffff;
-            --card-border: #e2e8f0;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        body {
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* --- Navigation --- */
-        nav {
-            background-color: var(--bg-dark);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 3px solid var(--accent);
-        }
-
-        .logo {
-            color: var(--white);
-            font-size: 1.5rem;
-            font-weight: 800;
-            text-decoration: none;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex; 
-            gap: 1.5rem; 
-            align-items: center;
-        }
-
-        .nav-links a.page-link {
-            color: var(--white); 
-            text-decoration: none; 
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a.page-link:hover {
-            color: var(--accent);
-        }
-
-        .nav-cta {
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 0.6rem 1.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            margin-left: 1rem;
-        }
-
+        :root { --bg-dark: #0f172a; --bg-light: #f8fafc; --accent: #ef4444; --accent-hover: #dc2626; --text-main: #334155; --text-light: #cbd5e1; --white: #ffffff; --card-border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { color: var(--text-main); background-color: var(--bg-light); line-height: 1.6; scroll-behavior: smooth; }
+        nav { background-color: var(--bg-dark); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--accent); }
+        .logo { color: var(--white); font-size: 1.5rem; font-weight: 800; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a.page-link { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a.page-link:hover { color: var(--accent); }
+        .nav-cta { background-color: var(--accent); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: 0.3s; margin-left: 1rem; }
         .nav-cta:hover { background-color: var(--accent-hover); }
-
-        /* --- Page Hero --- */
-        .page-hero {
-            background-color: var(--bg-dark);
-            color: var(--white);
-            padding: 4rem 5%;
-            text-align: center;
-        }
-
-        .page-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* --- Service Details --- */
-        .service-detail-section {
-            padding: 4rem 5%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .service-block {
-            background: var(--white);
-            padding: 3rem;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .service-block h2 {
-            color: var(--bg-dark);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid var(--accent);
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        .service-block p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .service-block ul {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-        }
-
-        .service-block ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: #020617;
-            color: var(--text-light);
-            padding: 3rem 5%;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        @media(max-width: 768px) {
-            .nav-links { display: none; }
-        }
+        .page-hero { background-color: var(--bg-dark); color: var(--white); padding: 4rem 5%; text-align: center; }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .service-detail-section { padding: 4rem 5%; max-width: 1000px; margin: 0 auto; }
+        .service-block { background: var(--white); padding: 3rem; border-radius: 8px; border: 1px solid var(--card-border); margin-bottom: 3rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .service-block h2 { color: var(--bg-dark); font-size: 2rem; margin-bottom: 1rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.5rem; display: inline-block; }
+        .service-block p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .service-block ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .service-block ul li { margin-bottom: 0.5rem; }
+        .lead-magnet { background-color: var(--bg-dark); color: var(--white); padding: 4rem 5%; text-align: center; border-radius: 8px; margin: 4rem auto; max-width: 900px; }
+        .lead-magnet input { padding: 0.8rem; width: 60%; max-width: 400px; border-radius: 4px; border: none; margin-right: 1rem; }
+        .lead-magnet button { padding: 0.8rem 2rem; background-color: var(--accent); color: var(--white); border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        footer { background-color: #020617; color: var(--text-light); padding: 3rem 5%; text-align: center; margin-top: 4rem; }
+        @media(max-width: 768px) { .nav-links { display: none; } .lead-magnet input { width: 100%; margin-bottom: 1rem; } }
     </style>
 </head>
 <body>
@@ -158,61 +38,61 @@
             <a href="managed-it.html" class="page-link" style="color: var(--accent);">Managed IT</a>
             <a href="cloud-network.html" class="page-link">Cloud & Network</a>
             <a href="consulting-projects.html" class="page-link">Consulting & Projects</a>
+            <a href="pricing.html" class="page-link">Pricing</a>
             <a href="index.html#assessment" class="nav-cta">Talk to an Expert</a>
         </div>
     </nav>
 
     <header class="page-hero">
         <h1>Managed IT & Security</h1>
-        <p style="font-size: 1.2rem; color: var(--text-light);">Predictable, flat-rate IT support to keep your clinic or business running 24/7.</p>
+        <p style="font-size: 1.2rem; color: var(--text-light);">Predictable, flat-rate IT support to keep your clinic or logistics business running 24/7.</p>
     </header>
 
     <section class="service-detail-section">
         
         <div class="service-block">
-            <h2>Managed IT Services</h2>
-            <p>Stop waiting for your technology to break. Our fully Managed IT Services provide proactive monitoring and automated maintenance for your entire infrastructure. We handle the technical heavy lifting so your staff can focus entirely on your core operations.</p>
+            <h2>IT For Healthcare & Dental Clinics</h2>
+            <p>You cannot afford application downtime when patients are waiting. We provide proactive monitoring and automated maintenance for your practice management software. We handle the technical heavy lifting so your staff can focus entirely on patient care.</p>
             <ul>
-                <li>24/7 workstation and server monitoring</li>
-                <li>Automated software patching and updates</li>
-                <li>Predictable, flat-rate monthly budgeting</li>
+                <li>Strict PHIPA Compliance for all patient records and network communications</li>
+                <li>Seamless integration with specialized dental and clinical software</li>
+                <li>Immutable data backups to protect sensitive data from ransomware</li>
             </ul>
         </div>
 
         <div class="service-block">
-            <h2>Cybersecurity Solutions</h2>
-            <p>Healthcare clinics and professional services are prime targets for ransomware. We implement strict, multi-layered Cybersecurity Solutions designed to meet PHIPA and industry compliance standards, protecting your sensitive data from internal and external threats.</p>
+            <h2>IT For Logistics & Small Business</h2>
+            <p>When your network goes down, shipments stop and revenue is lost. We implement highly resilient IT infrastructure designed for fast-paced operational environments, ensuring your dispatch and inventory systems stay online.</p>
             <ul>
-                <li>Next-generation antivirus and endpoint protection</li>
-                <li>Active threat hunting and network isolation protocols</li>
-                <li>Employee security awareness training</li>
+                <li>Zero-downtime networks with automatic failover capabilities</li>
+                <li>Secure remote workforce access for drivers and satellite offices</li>
+                <li>Predictable, flat-rate monthly budgeting with no surprise break-fix bills</li>
             </ul>
         </div>
 
         <div class="service-block">
-            <h2>Backup & Disaster Recovery</h2>
-            <p>Data loss can paralyze a business. Our Backup & Disaster Recovery solutions guarantee business continuity regardless of hardware failure, natural disaster, or cyberattack. We ensure your critical data is backed up safely and can be restored in minutes, not days.</p>
-            <ul>
-                <li>Automated daily local and cloud backups</li>
-                <li>Rapid virtualization capabilities for failed servers</li>
-                <li>Routine disaster recovery testing</li>
-            </ul>
-        </div>
-
-        <div class="service-block">
-            <h2>Helpdesk & Technical Support</h2>
-            <p>When your staff runs into an IT issue, they need immediate answers. Our Helpdesk & Technical Support provides fast, friendly, and highly knowledgeable remote assistance. No long hold times or confusing ticket portals—just direct access to local experts.</p>
+            <h2>Local, Direct Helpdesk Support</h2>
+            <p>When your staff runs into an IT issue, they need immediate answers. Our Helpdesk provides fast, friendly, and highly knowledgeable remote assistance. No long hold times or confusing ticket portals—just direct access to local Toronto experts.</p>
             <ul>
                 <li>Unlimited remote support for your entire team</li>
                 <li>Secure remote desktop troubleshooting</li>
-                <li>On-site emergency dispatch when necessary</li>
+                <li>On-site emergency dispatch throughout the GTA</li>
             </ul>
         </div>
 
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="index.html#assessment" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem;">Book a Free Security Audit</a>
+            <a href="pricing.html" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem;">View Pricing Plans</a>
         </div>
 
+    </section>
+
+    <section class="lead-magnet">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Is Your Clinic or Warehouse Truly Secure?</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.1rem;">Download our free <strong>2026 IT Security Audit Checklist</strong> to discover the 3 hidden risks costing Ontario businesses money.</p>
+        <form>
+            <input type="email" placeholder="Enter your business email address" required>
+            <button type="submit">Send My Checklist</button>
+        </form>
     </section>
 
     <footer>

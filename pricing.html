@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transparent IT Pricing | MSP Consulting</title>
     <style>
-        /* Exact same CSS as previous pages */
         :root { --bg-dark: #0f172a; --bg-light: #f8fafc; --accent: #ef4444; --accent-hover: #dc2626; --text-main: #334155; --text-light: #cbd5e1; --white: #ffffff; --card-border: #e2e8f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body { color: var(--text-main); background-color: var(--bg-light); line-height: 1.6; scroll-behavior: smooth; }
-        
-        /* --- Navigation --- */
         nav { background-color: var(--bg-dark); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--accent); }
         .logo { color: var(--white); font-size: 1.5rem; font-weight: 800; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
         .nav-links { display: flex; gap: 1.5rem; align-items: center; }
@@ -18,25 +15,20 @@
         .nav-links a.page-link:hover { color: var(--accent); }
         .nav-cta { background-color: var(--accent); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; transition: 0.3s; margin-left: 1rem; }
         .nav-cta:hover { background-color: var(--accent-hover); }
-        
-        /* --- Page Hero --- */
         .page-hero { background-color: var(--bg-dark); color: var(--white); padding: 4rem 5%; text-align: center; }
         .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        
-        /* --- Layout --- */
         .section-container { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        
-        /* --- Cards --- */
         .card { background: var(--white); padding: 2.5rem 2rem; border-radius: 8px; border: 1px solid var(--card-border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: transform 0.3s; display: flex; flex-direction: column; text-align: center; }
         .card:hover { transform: translateY(-5px); }
         .card h3 { color: var(--bg-dark); font-size: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; display: inline-block; }
         .learn-more-btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; border-radius: 4px; font-weight: bold; transition: all 0.2s; margin-top: auto; }
         .learn-more-btn:hover { background-color: var(--accent); color: var(--white); }
-        
-        /* --- Footer --- */
+        .lead-magnet { background-color: var(--bg-dark); color: var(--white); padding: 4rem 5%; text-align: center; border-radius: 8px; margin: 4rem auto; max-width: 900px; }
+        .lead-magnet input { padding: 0.8rem; width: 60%; max-width: 400px; border-radius: 4px; border: none; margin-right: 1rem; }
+        .lead-magnet button { padding: 0.8rem 2rem; background-color: var(--accent); color: var(--white); border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
         footer { background-color: #020617; color: var(--text-light); padding: 3rem 5%; text-align: center; margin-top: 2rem; }
-        @media(max-width: 768px) { .nav-links { display: none; } }
+        @media(max-width: 768px) { .nav-links { display: none; } .lead-magnet input { width: 100%; margin-bottom: 1rem; } }
     </style>
 </head>
 <body>
@@ -107,6 +99,15 @@
             <p style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">We offer custom pricing models for larger medical facilities, multi-location dental offices, and specialized hardware setups.</p>
             <a href="index.html#assessment" class="nav-cta" style="font-size: 1.2rem; padding: 1rem 2rem;">Schedule a Custom Discovery Call</a>
         </div>
+    </section>
+
+    <section class="lead-magnet">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Is Your Clinic or Warehouse Truly Secure?</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.1rem;">Download our free <strong>2026 IT Security Audit Checklist</strong> to discover the 3 hidden risks costing Ontario businesses money.</p>
+        <form>
+            <input type="email" placeholder="Enter your business email address" required>
+            <button type="submit">Send My Checklist</button>
+        </form>
     </section>
 
     <footer>
